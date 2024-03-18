@@ -8,6 +8,8 @@ import ImgFeature from "./assets/images/illustration-2.svg";
 import IconArrow from "./assets/images/icon-arrow.svg";
 import IconQuotes from "./assets/images/icon-quotes.svg";
 import Avatar from "./assets/images/avatar-testimonial.jpg";
+import IconPhone from "./assets/images/icon-phone.svg";
+import IconEmail from "./assets/images/icon-email.svg";
 
 function App() {
   const [email0, setEmail0] = useState("");
@@ -144,7 +146,77 @@ function App() {
         </div>
       </main>
 
+      <div className="access block--padding">
+        <div className="access__wrapper">
+          <div className="access__content">
+            <h2 className="text--bold text--headings">
+              Get early access today
+            </h2>
+            <p>
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <form className="access__form">
+            <div className="email-wrapper">
+              <input
+                className={"email text--body" + (error1 ? " error__email" : "")}
+                type="email"
+                placeholder="Enter your email..."
+                value={email1}
+                onChange={(e) => setEmail1(e.target.value)}
+              ></input>
+              {error1 ? (
+                <div className="error__msg">Please check your email</div>
+              ) : null}
+            </div>
+            <button
+              className="button text--headings text--bold access__button"
+              type="submit"
+              onClick={(e) => handleSubmit(e, 1)}
+            >
+              Get Started For Free
+            </button>
+          </form>
+        </div>
+      </div>
+
       <footer className="footer block--padding">
+        <img className="footer__logo" src={Logo} alt="logo img"></img>
+
+        <div className="footer__content">
+          <div className="footer__contact">
+            <div className="footer__contact-container">
+              <img className="icon__img" src={IconPhone} alt="icon phone"></img>
+              <p>Phone: +1-543-123-4567</p>
+            </div>
+            <div className="footer__contact-container">
+              <img className="icon__img" src={IconEmail} alt="icon email"></img>
+              <p>example@fylo.com</p>
+            </div>
+          </div>
+
+          <div className="footer__sitemap">
+            <a className="sitemap__item">About Us</a>
+            <a className="sitemap__item">Jobs</a>
+            <a className="sitemap__item">Press</a>
+            <a className="sitemap__item">Blog</a>
+          </div>
+
+          <div className="footer__sitemap">
+            <a className="sitemap__item">Contact Us</a>
+            <a className="sitemap__item">Terms</a>
+            <a className="sitemap__item">Privacy</a>
+          </div>
+
+          <div className="footer__socials">
+            <i className="fa-brands fa-facebook-f social__icon"></i>
+            <i className="fa-brands fa-twitter social__icon"></i>
+            <i className="fa-brands fa-instagram social__icon"></i>
+          </div>
+        </div>
+
         <p className="attribution">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
