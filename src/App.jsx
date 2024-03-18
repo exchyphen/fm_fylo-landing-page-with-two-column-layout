@@ -93,7 +93,7 @@ function App() {
 
       <main className="main block--padding">
         <div className="main__content">
-          <h1 className="text--bold text--headings">
+          <h1 className="text--bold text--headings main__heading">
             Stay productive, wherever you are
           </h1>
           <div className="main__descriptions">
@@ -105,14 +105,16 @@ function App() {
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required!
             </p>
-            <a className="main__cta">
-              See how Fylo works{" "}
-              <img
-                className="main__arrow"
-                src={IconArrow}
-                alt="icon arrow"
-              ></img>
-            </a>
+            <div className="main__cta-wrapper">
+              <a className="main__cta">
+                See how Fylo works{" "}
+                <img
+                  className="main__arrow"
+                  src={IconArrow}
+                  alt="icon arrow"
+                ></img>
+              </a>
+            </div>
           </div>
 
           <div className="testimonial">
